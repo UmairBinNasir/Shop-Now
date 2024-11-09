@@ -20,19 +20,18 @@ async function getData(cateogry: string) {
 
 export const dynamic = "force-dynamic";
 
-export default async function CategoryPage({
-  params,
-}: {
-  params: { category: string };
-}) {
-  const data: simplifiedProduct[] = await getData(params.category);
+type Params = Promise<{ category: string }>
+
+export default async function CategoryPage({ params }: { params: Params }) {
+  const { category } = await params;
+  const data: simplifiedProduct[] = await getData(category);
 
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 sm:px-6  lg:max-w-7xl lg:px-8">
         <div className="flex justify-between items-center">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            Our Products for {params.category}
+            Our Products for {category}
           </h2>
         </div>
 
