@@ -18,9 +18,9 @@ async function getData(cateogry: string) {
   return data;
 }
 
-export const dynamic = "force-dynamic";
-
 type Params = Promise<{ category: string }>
+
+export const dynamic = "force-dynamic";
 
 export default async function CategoryPage({ params }: { params: Params }) {
   const { category } = await params;
