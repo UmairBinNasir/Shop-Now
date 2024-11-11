@@ -24,10 +24,10 @@ async function getData(slug: string) {
 
   return data;
 }
-// Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sint perspiciatis sit, maxime ab voluptatum recusandae corrupti obcaecati nobis. Corrupti qui adipisci dignissimos repellendus explicabo aliquam aut consequuntur a, recusandae facere aliquid reiciendis debitis nulla quam, dolorum quas voluptatem! Illum dolores in, asperiores quia inventore maxime provident aliquid nam, ullam perspiciatis error ducimus recusandae tempora fugiat.
-export const dynamic = "force-dynamic";
 
 type Params = Promise<{ slug: string }>
+
+export const dynamic = "force-dynamic";
 
 export default async function ProductPge({ params }: { params: Params }) {
   const { slug } = await params;
