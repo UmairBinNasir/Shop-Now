@@ -45,6 +45,7 @@ export default function Navbar() {
               )}
             </div>
           ))}
+          <Link className="text-lg ml-48 font-semibold text-gray-600 transition duration-100 hover:text-primary" href="/login">Login</Link>
         </nav>
 
         <div className="flex divide-x border-r sm:border-l">
